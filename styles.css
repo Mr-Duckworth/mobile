@@ -1,0 +1,441 @@
+html {
+    width: 375px;
+}
+
+body {
+    font-family: 'Ubuntu';
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 700;
+    color: hsl(213, 96%, 18%);
+}
+
+h1 {
+    font-size: 20px;
+}
+
+h6 {
+    font-size: 15px;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 400;
+    color: hsl(231, 11%, 63%) ;
+    letter-spacing: 0.5px;
+}
+
+section.top-section {
+    background-image: url("assets/images/bg-sidebar-mobile.svg");
+    height:172px;
+    position: relative;
+}
+
+section.middle-section {
+    background-color: hsl(205, 70%, 91%);
+    height: 420px;
+    position: relative;
+    z-index: 2;
+}
+
+section.bottom-section {
+    background-color: #ffff;
+    position: relative;
+    padding: 13px 28px;
+}
+
+form {
+    display: none; 
+    background-color: transparent;  
+    width: 325px; 
+}
+
+form.active {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    margin: -75px 0 0 20px;
+}
+
+div.white-section {
+    background-color: #ffff;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+button.btn {
+    position: relative;
+    border-radius: 3px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 14px;
+    background: hsl(213, 96%, 18%);
+    padding: 6px 11px;
+    text-decoration: none;
+    float: right;
+}
+
+button.btn:hover {
+    background: hsl(213, 96%, 29%);
+    color: #ffffff;
+}
+
+button.btn-outline-light {
+    position: relative;
+    background: transparent;
+    border: none;
+    color: hsl(231, 11%, 63%);
+    font-size: 15px;
+    font-weight: 700;
+    float: left;
+    margin-top: 3px;
+}
+
+
+button.btn-outline-light:hover, button.btn-outline-light:focus {
+    background: transparent;
+    border: none;
+    color: hsl(213, 96%, 18%);
+}
+
+button.step-four-btn {
+    position: relative;
+    border-radius: 3px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 6px 13px;
+    text-decoration: none;
+    float: right;
+    background: hsl(243, 100%, 62%);
+}
+
+button.step-four-btn:hover {
+    background-color: hsl(243, 90%, 80%);
+}
+
+.bottom-section > button {
+    display: none;
+}
+
+button.act{
+    display: block;
+}
+
+/************ Nav Bar ******************/
+
+input[type="radio"].form-check-input {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    background: transparent;
+    margin-top: 35px;
+}
+
+input[type="radio"].form-check-input:checked {
+    background-color: hsl(206, 94%, 87%);
+    border: 0;
+}
+
+label span {
+    position: relative;
+    left: -24px;
+    top: 37px;
+    font-size: 15px;
+    color: #fff;
+}
+
+/****************  Step One **************/
+
+.first-step label {
+    padding-top: 20px;
+    color: hsl(213, 96%, 18%);
+}
+
+.first-step .white-section {
+    padding: 25px 20px 30px;
+}
+
+input.form-control {
+    border-radius: 0;
+}
+
+input.form-control::placeholder {
+    color: hsl(231, 11%, 63%);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+
+
+/******************** Step Two  ****************/
+
+.step-two {
+    display: none;
+}
+
+.second-step .active {
+    display: block;
+}
+
+label.btn-outline-primary {
+    height:70px;
+    width: 280px;
+    padding: 12px 15px 7px;
+    border: 1px solid hsl(229, 24%, 87%);
+    background-color: #fff;
+    margin-top: 15px;
+    text-align: left;
+    display: grid;
+    grid-template-columns:  (20%, 80%) ;
+    grid-template-rows: 1fr;
+}
+
+.yearly > .btn-outline-primary {
+    padding: 10px 12px 5px;
+    height: 73px;
+}
+
+div.step-two {
+    padding-top: 7px;
+}
+
+label.btn-outline-primary img {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+label.btn-outline-primary > div {
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: -3px;
+    width: 180px;
+}
+
+label.btn-outline-primary p:last-child {
+    margin-top: -2px;
+}
+
+label.btn-outline-primary p:not(:last-child) {
+    margin-top: -8px ;
+}
+
+.btn-check+.btn:hover {
+    border: 1px solid  hsl(243, 100%, 62%);
+}
+
+
+.btn-check+.btn:focus, .btn-check:checked+.btn{
+    background-color: hsl(217, 100%, 97%);
+    border: 1px solid  hsl(243, 100%, 62%);
+}
+
+
+.btn-group>.btn:not(:last-child):not(.dropdown-toggle), .btn-group>.btn:nth-child(n+3) {
+    border-radius: 10px;
+}
+
+p.strong{
+    font-weight: 400;
+    font-size: 13px;
+    color: hsl(213, 96%, 18%) ;
+}
+
+.form-check {
+    margin-top: -22px;
+    margin-left: 70px;
+}
+
+.form-check label {
+    margin-left: 0px;
+    color: hsl(231, 11%, 63%);
+    font-weight: 500;
+}
+
+.toggle {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-left: 50px;
+    color: hsl(213, 96%, 18%);
+    font-weight: 500;
+}
+
+
+/******************* Step Three  **************/
+
+
+div.add-ons {
+    display: none;
+    padding-bottom: 10px;
+}
+
+.third-step .active {
+    display: block;
+}
+
+label.step-three-label   {
+    width: fit-content;
+    display: grid;
+    grid-template-columns:(20%, 60%, 20%);
+    gap: 8px;
+    grid-template-rows: 1fr;
+    margin-top: 14px;
+    margin-left: -10px;
+    padding: 10px;
+    border: 1px solid hsl(229, 24%, 87%) ;
+}
+
+div.step-3-one {
+    grid-column: 1;
+    grid-row: 1;
+    padding-top: 10px;
+}
+
+div.step-3-two {
+    grid-column: 2;
+    grid-row: 1;
+    width: 200px;
+    text-align: left;
+} 
+div.step-3-two h6 {
+    font-size: 15px;
+    margin: 0;
+}
+
+div.step-3-two p {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+div.step-3-three {
+    grid-column: 3;
+    grid-row: 1;
+    padding-top: 10px;
+}
+
+.third-step .pricing {
+    color: hsl(243, 100%, 62%);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+.third-step .form-check-input {
+    width: 14px;
+    height: 14px;
+}
+
+.third-step .form-check-input:focus {
+    border-color: #fff;
+    outline: none;
+    box-shadow: none;
+}
+
+.third-step .form-check-input:checked {
+    background-color: hsl(243, 100%, 62%);
+}
+
+.third-step .btn-check {
+    position: relative;
+}
+
+label.btn:hover {
+    border: 1px solid hsl(243, 100%, 62%);
+}
+
+label.btn:active {
+    border: 1px solid hsl(243, 100%, 62%);
+    background-color: hsl(217, 100%, 97%);   
+}
+
+label.btn:first-child:active, label:not(.btn-check)+.btn:active {
+    border: 1px solid hsl(243, 100%, 62%);
+    background-color: hsl(217, 100%, 97%);
+}
+
+
+
+
+/************** Step Four **************/
+
+
+.fourth-step .whole-selection {
+    padding: 10px;
+    width: 285px;
+}
+
+.fourth-step .selection {
+    background-color: hsl(231, 100%, 99%);
+    border-radius: 7px;
+    padding-bottom: 10px;
+    padding: 10px;
+}
+
+div.selection > p {
+    font-size: 14px;
+    padding-bottom: 15px;
+}
+
+.fourth-step h6 {
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+.fourth-step a {
+    color: hsl(231, 11%, 63%);
+    font-size: 14px;
+}
+
+.fourth-step a:hover {
+    color: hsl(243, 100%, 62%);
+}
+
+.fourth-step .selection-pricing {
+    float: right;
+    margin-top: -10px;
+    color: hsl(213, 96%, 18%);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.fourth-step span {
+    float: right;
+    margin-top: -40px;
+    color: none;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.fourth-step .selection-total {
+    padding: 10px;
+}
+
+.fourth-step .total {
+    font-weight: 500;
+}
+
+.fourth-step .pricing-total {
+    float: right;
+    margin-top: -20px;
+    color:  hsl(243, 100%, 62%);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+
+
+
+
+/***************** Step Five ***************************/
+
+
+.fifth-step .white-section {
+    text-align: center;
+    padding: 50px 20px;
+}
