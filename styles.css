@@ -1,8 +1,7 @@
-html {
-    width: 375px;
-}
+
 
 body {
+    max-width: 375px;
     font-family: 'Ubuntu';
 }
 
