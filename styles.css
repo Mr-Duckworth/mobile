@@ -36,6 +36,7 @@ p {
 section.main-section {
     background: url("assets/images/bg-sidebar-mobile.svg"), hsl(205, 70%, 91%) ;
     width: 100vw;
+    height: 100vh;
     background-repeat: no-repeat;
     background-size: contain;
 
