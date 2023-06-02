@@ -39,8 +39,9 @@ section.main-section {
 }
 
 div.bottom-section {
-    position: absolute;
+    position:absolute;
     bottom: 0;
+    height: 8vh;
     width: 100vw;
     background-color: #ffff;
     padding: 3% 10%;
