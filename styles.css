@@ -1,8 +1,12 @@
 
 
 body {
-    max-width: 375px;
     font-family: 'Ubuntu';
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -27,36 +31,38 @@ p {
     letter-spacing: 0.5px;
 }
 
-section.top-section {
-    background-image: url("assets/images/bg-sidebar-mobile.svg");
-    height:172px;
-    position: relative;
+section.main-section {
+    background: url("assets/images/bg-sidebar-mobile.svg"), hsl(205, 70%, 91%) ;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+
 }
 
-section.middle-section {
-    background-color: hsl(205, 70%, 91%);
-    height: 420px;
-    position: relative;
-    z-index: 2;
-}
-
-section.bottom-section {
+div.bottom-section {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
     background-color: #ffff;
-    position: relative;
-    padding: 13px 28px;
+    padding: 3% 10%;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0 10%;
 }
 
 form {
     display: none; 
-    background-color: transparent;  
-    width: 325px; 
+    background-color: transparent;   
 }
 
 form.active {
     display: block;
-    position: absolute;
-    z-index: 1;
-    margin: -75px 0 0 20px;
+    
 }
 
 div.white-section {
@@ -66,7 +72,6 @@ div.white-section {
 }
 
 button.btn {
-    position: relative;
     border-radius: 3px;
     font-family: Arial;
     color: #ffffff;
@@ -83,7 +88,6 @@ button.btn:hover {
 }
 
 button.btn-outline-light {
-    position: relative;
     background: transparent;
     border: none;
     color: hsl(231, 11%, 63%);
@@ -101,7 +105,6 @@ button.btn-outline-light:hover, button.btn-outline-light:focus {
 }
 
 button.step-four-btn {
-    position: relative;
     border-radius: 3px;
     font-family: Arial;
     color: #ffffff;
@@ -122,6 +125,17 @@ button.step-four-btn:hover {
 
 button.act{
     display: block;
+}
+
+.error {
+    display: none;
+    font-weight: 700;
+    font-size: 0.7rem;
+    color: red;
+}
+
+.shake {
+    animation: shake 150ms 2 linear;
 }
 
 /************ Nav Bar ******************/
@@ -183,14 +197,14 @@ input.form-control::placeholder {
 
 label.btn-outline-primary {
     height:70px;
-    width: 280px;
     padding: 12px 15px 7px;
     border: 1px solid hsl(229, 24%, 87%);
     background-color: #fff;
     margin-top: 15px;
     text-align: left;
     display: grid;
-    grid-template-columns:  (20%, 80%) ;
+    gap: 10px;
+    grid-template-columns:  15% 85%;
     grid-template-rows: 1fr;
 }
 
@@ -206,13 +220,13 @@ div.step-two {
 label.btn-outline-primary img {
     grid-column: 1;
     grid-row: 1;
+    width: fit-content;
 }
 
 label.btn-outline-primary > div {
     grid-column: 2;
     grid-row: 1;
     margin-top: -3px;
-    width: 180px;
 }
 
 label.btn-outline-primary p:last-child {
@@ -245,12 +259,14 @@ p.strong{
 }
 
 .form-check {
-    margin-top: -22px;
-    margin-left: 70px;
+    margin-top: -24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .form-check label {
-    margin-left: 0px;
+    margin-left: 9%;
     color: hsl(231, 11%, 63%);
     font-weight: 500;
 }
@@ -259,7 +275,7 @@ p.strong{
     padding-top: 10px;
     padding-bottom: 10px;
     margin-top: 20px;
-    margin-left: 50px;
+    margin-left: 23% ;
     color: hsl(213, 96%, 18%);
     font-weight: 500;
 }
@@ -277,29 +293,27 @@ div.add-ons {
     display: block;
 }
 
-label.step-three-label   {
-    width: fit-content;
+.step-three-label   {
     display: grid;
-    grid-template-columns:(20%, 60%, 20%);
+    grid-template-columns: 10% 65% 15%;
     gap: 8px;
     grid-template-rows: 1fr;
-    margin-top: 14px;
-    margin-left: -10px;
+    margin-top: 17px;
     padding: 10px;
     border: 1px solid hsl(229, 24%, 87%) ;
+    text-align: left;
+    border-radius: 5px;
 }
 
 div.step-3-one {
     grid-column: 1;
     grid-row: 1;
-    padding-top: 10px;
+    padding-top: 6px;
 }
 
 div.step-3-two {
     grid-column: 2;
     grid-row: 1;
-    width: 200px;
-    text-align: left;
 } 
 div.step-3-two h6 {
     font-size: 15px;
@@ -325,8 +339,8 @@ div.step-3-three {
 
 
 .third-step .form-check-input {
-    width: 14px;
-    height: 14px;
+    width: 15px;
+    height: 15px;
 }
 
 .third-step .form-check-input:focus {
@@ -343,35 +357,30 @@ div.step-3-three {
     position: relative;
 }
 
-label.btn:hover {
+label.step-three-label:hover {
     border: 1px solid hsl(243, 100%, 62%);
 }
 
-label.btn:active {
+
+.show {
+    background: hsl(217, 100%, 97%);
     border: 1px solid hsl(243, 100%, 62%);
-    background-color: hsl(217, 100%, 97%);   
 }
-
-label.btn:first-child:active, label:not(.btn-check)+.btn:active {
-    border: 1px solid hsl(243, 100%, 62%);
-    background-color: hsl(217, 100%, 97%);
-}
-
-
 
 
 /************** Step Four **************/
 
+.fourth-step .white-section {
+    padding: 20px;
+}
 
 .fourth-step .whole-selection {
-    padding: 10px;
-    width: 285px;
+    padding: 15px;
 }
 
 .fourth-step .selection {
     background-color: hsl(231, 100%, 99%);
     border-radius: 7px;
-    padding-bottom: 10px;
     padding: 10px;
 }
 
@@ -412,7 +421,7 @@ div.selection > p {
 }
 
 .fourth-step .selection-total {
-    padding: 10px;
+    padding: 10px 8px;
 }
 
 .fourth-step .total {
@@ -435,6 +444,7 @@ div.selection > p {
 
 
 .fifth-step .white-section {
+    width: 80vw;
     text-align: center;
-    padding: 50px 20px;
+    padding: 50px;
 }

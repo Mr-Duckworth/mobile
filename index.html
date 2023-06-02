@@ -26,7 +26,7 @@
 </head>
 <body>
     <!-- Sidebar start -->
-  <section class="top-section">
+  <section class="main-section">
     <nav>
       <div class="nav-bar">
           <ul class="nav justify-content-center">
@@ -62,10 +62,10 @@
             </ul>
       </div>
     </nav>
-  </section>
+  
     
-  <!-- Sidebar end -->
-  <Section class="middle-section">
+  <!-- Sidebar end -->>
+  <main>
       <!-- Step 1 start -->
     <form action="" class="first-step active">
       <div class="white-section">
@@ -80,11 +80,15 @@
           </div>
           <div>
             <label for="emailAddress">Email Address</label>
-            <input class="form-control" id="emailAddress" type="email" placeholder="e.g. stephenking@lorem.com" autocomplete="off">
+            <input class="form-control" id="emailAddress" type="email" placeholder="e.g. stephenking@lorem.com" autocomplete="off" required>
+            <span class="email-error error">
+              Please input a valid email
+            </span>
           </div>
           <div>
             <label for="phoneNumber">Phone Number</label>
-            <input class="form-control" id="phoneNumber" type="tel" placeholder="e.g. +1 234 567 890" autocomplete="off">
+            <input class="form-control" id="phoneNumber" type="tel" placeholder="e.g. +1 234 567 890" autocomplete="off" required>
+            <span class="phone-error error"> Must be 11 digits</span>
           </div>
         </div>
       </div>
@@ -185,9 +189,9 @@
           <p>Add-ons help enhance your gaming experience.</p>
         </div>
         <div class="add-ons add-ons-monthly active">
-          <label class="step-three-label btn" for="checkboxOne">
+          <label class="step-three-label " for="checkboxOne">
             <div class="step-3-one">
-              <input type="checkbox" class="form-check-input btn-check" name="add-ons" id="checkboxOne" autocomplete="off" value="Online service" placeholder="+$1/mo">
+              <input type="checkbox" class="form-check-input btn-check" name="add-ons" id="checkboxOne" autocomplete="off" value="Online service" placeholder="+$1/mo" onclick="addonToggle()">
             </div>
             <div class="step-3-two">
               <h6>Online service</h6>
@@ -198,9 +202,9 @@
             </div>
           </label>
   
-          <label class="step-three-label btn" for="checkboxTwo">
+          <label class="step-three-label " for="checkboxTwo">
             <div class="step-3-one">
-              <input type="checkbox" class="form-check-input btn-check" name="add-ons" id="checkboxTwo" autocomplete="off" value="Larger storage" placeholder="+$2/mo">
+              <input type="checkbox" class="form-check-input btn-check" name="add-ons" id="checkboxTwo" autocomplete="off" value="Larger storage" placeholder="+$2/mo" onclick="addonToggle()">
             </div>
             <div class="step-3-two">
               <h6>Larger storage</h6>
@@ -211,9 +215,9 @@
             </div>
           </label>
           
-          <label class="step-three-label btn" for="checkboxThree">
+          <label class="step-three-label " for="checkboxThree">
             <div class="step-3-one">
-              <input type="checkbox" class="form-check-input btn-check" name="add-ons" id="checkboxThree" autocomplete="off" value="Customizable profile" placeholder="+$2/mo">
+              <input type="checkbox" class="form-check-input btn-check" name="add-ons" id="checkboxThree" autocomplete="off" value="Customizable profile" placeholder="+$2/mo" onclick="addonToggle()">
             </div>
             <div class="step-3-two">
               <h6>Customizable profile</h6>
@@ -228,9 +232,9 @@
   
   
         <div class="add-ons add-ons-yearly">
-          <label class="step-three-label btn" for="checkboxFour">
+          <label class="step-three-label " for="checkboxFour">
             <div class="step-3-one">
-              <input type="checkbox" class="form-check-input btn-check" name="add-ons" id="checkboxFour" autocomplete="off" value="Online service" placeholder="+$10/yr">
+              <input type="checkbox" class="form-check-input btn-check" name="add-ons" id="checkboxFour" autocomplete="off" value="Online service" placeholder="+$10/yr" onclick="addonToggle()">
             </div>
             <div class="step-3-two">
               <h6>Online service</h6>
@@ -241,9 +245,9 @@
             </div>
           </label>
   
-          <label class="step-three-label btn" for="checkboxFive">
+          <label class="step-three-label " for="checkboxFive">
             <div class="step-3-one">
-              <input type="checkbox" class="form-check-input btn-check" name="add-ons" id="checkboxFive" autocomplete="off" value="Larger storage" placeholder="+$20/yr">
+              <input type="checkbox" class="form-check-input btn-check" name="add-ons" id="checkboxFive" autocomplete="off" value="Larger storage" placeholder="+$20/yr" onclick="addonToggle()">
             </div>
             <div class="step-3-two">
               <h6>Larger storage</h6>
@@ -254,9 +258,9 @@
             </div>
           </label>
           
-          <label class="step-three-label btn" for="checkboxSix">
+          <label class="step-three-label " for="checkboxSix">
             <div class="step-3-one">
-              <input type="checkbox" class="form-check-input btn-check" name="add-ons" id="checkboxSix" autocomplete="off" value="Customizable profile" placeholder="+$20/yr">
+              <input type="checkbox" class="form-check-input btn-check" name="add-ons" id="checkboxSix" autocomplete="off" value="Customizable profile" placeholder="+$20/yr" onclick="addonToggle()">
             </div>
             <div class="step-3-two">
               <h6>Customizable profile</h6>
@@ -323,6 +327,7 @@
 
       
     </form>
+    </main>
 
     <!-- Step 5 end -->
     <!-- <div class="attribution">
@@ -330,11 +335,11 @@
       Coded by <a href="#">Your Name Here</a>.
     </div> -->
    
-  </Section>
-  <section class="bottom-section">
-    <button class="btn-outline-light" type="button"> Go Back </button> 
-    <button class="btn act" type="button"  onclick="submitBtn()"> Next Step </button>
-    <button class="btn step-four-btn" type="button"> Confirm </button> 
+    <div class="bottom-section">
+      <button class="btn-outline-light" type="button"> Go Back </button> 
+      <button class="btn act" type="button"  onclick="submitBtn()"> Next Step </button>
+      <button class="btn step-four-btn" type="button"> Confirm </button> 
+    </div>
   </section>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="index.js" charset="UTF-8"></script>
