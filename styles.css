@@ -2,6 +2,7 @@
 body {
     font-family: 'Ubuntu';
     width: 100vw;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,16 +33,15 @@ p {
 section.main-section {
     background: url("assets/images/bg-sidebar-mobile.svg"), hsl(205, 70%, 91%) ;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-repeat: no-repeat;
     background-size: contain;
 
 }
 
 div.bottom-section {
-    position:absolute;
+    position:fixed;
     bottom: 0;
-    height: 8vh;
     width: 100vw;
     background-color: #ffff;
     padding: 3% 10%;
